@@ -6,20 +6,20 @@
     <div class="col-sm">
     </div>
     <div class="col-sm">
-      <!--<ul class="nav justify-content-end">-->
-      <!--  <li class="nav-item">-->
-      <!--    <a class="nav-link active" href="#">Active</a>-->
-      <!--  </li>-->
-      <!--  <li class="nav-item">-->
-      <!--    <a class="nav-link" href="#">Link</a>-->
-      <!--  </li>-->
-      <!--  <li class="nav-item">-->
-      <!--    <a class="nav-link" href="#">Link</a>-->
-      <!--  </li>-->
-      <!--  <li class="nav-item">-->
-      <!--    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-      <!--  </li>-->
-      <!--</ul>-->
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <%= link_to "Sing in", new_user_session_path, method: :get, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sing out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+        <!--<li class="nav-item">-->
+        <!--  <a class="nav-link" href="#">Link</a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+        <!--  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+        <!--</li>-->
+      </ul>
     </div>
   </div>
 </nav>
