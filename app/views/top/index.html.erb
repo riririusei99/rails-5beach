@@ -2,6 +2,6 @@
     <h1 class="text-center">"やりきる"ことの難しさ</h1>
     <p class="text-center">旅行やイベントの計画をサポートします。</p>
     <div class="mx-auto" style="width: 200px;">
-    <button type="button" class="btn btn-primary" style="width: 200px;">イベントを計画する</button>
+    <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary", style: "width: 200px;" %>
     </div>
   </div>
