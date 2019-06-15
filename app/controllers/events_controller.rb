@@ -3,7 +3,8 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @post = Event.includes(:user).find(params[:id])
+    @event = Event.includes(:user).find(params[:id])
+    binding.pry
   end
 
   def new
