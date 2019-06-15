@@ -4,7 +4,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.includes(:user).find(params[:id])
-    binding.pry
   end
 
   def new
