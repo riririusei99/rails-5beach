@@ -1,0 +1,18 @@
+<%= form_for(@event) do |f|  %>
+  <div class="form-group">
+    <label for="title">イベント名</label>
+    <%= f.text_field :title, placeholder: "海に行こう！", class: "form-control" %>
+    <small id="textHelp" class="form-text text-muted">実施したいイベントのタイトルを入力してください。</small>
+  </div>
+  <div class="form-group">
+    <label for="Date">Date</label>
+    <%= f.date_field :date, class: "form-control" %>
+    <small id="emailHelp" class="form-text text-muted">イベントの実施日を入力してください。</small>
+  </div>
+  <div class="form-group">
+    <label for="text">テキスト</label>
+    <%= f.text_area :text, placeholder: "スケジュール・持ち物・ToDo等", class: "form-control" %>
+    <small id="textHelp" class="form-text text-muted">概要・連絡等自由に入力してください。</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+<% end %>
