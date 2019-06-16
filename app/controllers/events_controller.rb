@@ -14,6 +14,13 @@ class EventsController < ApplicationController
     Event.create(create_params)
   end
   
+  def edit
+    @event = Event.includes(:user).find(params[:id])
+  end
+  
+  def destroy
+  end
+    
   private
   def create_params
     params.require(:event).permit(:title, :date, :text).merge(owner_id: current_user.id)
