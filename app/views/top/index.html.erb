@@ -9,33 +9,57 @@
     <%= stylesheet_link_tag "style", :media => "all" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <!--<header class="header">-->
-    <!--</header>-->
     <%= render partial: 'common/header' %>
-    <section class="contact" id="contact">
+    <header class="header">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-      <h1 class="text-center">"やりきる"ことの難しさ</h1>
-      <p class="text-center">旅行やイベントの計画をサポートします。</p>
-      <div class="mx-auto" style="width: 200px;">
-      <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary btn-primary-extend", style: "width: 200px;" %>
+      <p class="site-title-sub">-----  "やりきる"計画を作る。  -----</p>
+      <h1 class="site-title">5Beach</h1>
+      <p class="site-description">旅行やイベントの計画をサポートします。</p>
+      <div class="buttons">
+        <%= link_to "Sign up", new_event_path, method: :get, class: "button" %>
+        <%= link_to "イベントを計画する", new_event_path, method: :get, class: "button button-orange" %>
       </div>
-    </section>
+    </header>
     <section class="about" id="about">
+      <h2 class="heading">About "5beach"</h2>
+      <p class="about-text">
+        「計画はするけど、実際にやらない。」<br>
+        そんなことが結構あるので、これは機会損失では？と考えるようになりました。そんな人に向けて計画を最後までサポートするためにアプリを作ろうと思ったのがこのアプリです。<br>
+        計画して実施したあとは振り返る。そんなところまでアプリを作りたい。
+      </p>
     </section>
   
     <section class="works">
-    </section>
-  
-
-    <div class="container">
-      <div class="message-area">
-      </div>
-        <div class="col align-self-center">
+      <h2 class="heading">riririusei99</h2>
+      <p class="site-title-sub">-----  最近買ったスニーカー  -----</p>
+      <div class="works-wrapper">
+      <div class="work-box">
+        <img class="work-image" src="images/pictweet.jpg" alt="AirMax1">
+        <div class="work-description">
+          AirMax1<br>
+          <!--<a href="#" class="button button-ghost">READ MORE</a>-->
         </div>
-    </div>
+      </div>
+  
+      <div class="work-box">
+        <img class="work-image" src="images/mooovi.jpg" alt="AirMax2">
+        <div class="work-description">
+          AirMax2<br>
+          <!--<a href="#" class="button button-ghost">READ MORE</a>-->
+        </div>
+      </div>
+  
+      <div class="work-box">
+        <img class="work-image" src="images/profy.jpg" alt="AirMax90">
+        <div class="work-description"> 
+          AirMax90<br>
+          <!--<a href="#" class="button button-ghost">READ MORE</a>-->
+        </div>
+      </div>
+      </div>
+    </section>
   </body>
 </html>
 
