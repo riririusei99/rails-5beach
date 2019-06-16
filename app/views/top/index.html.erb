@@ -1,7 +1,31 @@
-  <div class="col align-self-center">
-    <h1 class="text-center">"やりきる"ことの難しさ</h1>
-    <p class="text-center">旅行やイベントの計画をサポートします。</p>
-    <div class="mx-auto" style="width: 200px;">
-    <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary", style: "width: 200px;" %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails5beach</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "style", :media => "all" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: 'common/header' %>
+    <div class="container">
+      <div class="message-area">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+      </div>
+        <div class="col align-self-center">
+          <h1 class="text-center">"やりきる"ことの難しさ</h1>
+          <p class="text-center">旅行やイベントの計画をサポートします。</p>
+          <div class="mx-auto" style="width: 200px;">
+          <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary btn-primary-extend", style: "width: 200px;" %>
+          </div>
+        </div>
     </div>
-  </div>
+  </body>
+</html>
+
+
