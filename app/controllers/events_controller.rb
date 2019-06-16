@@ -14,15 +14,32 @@ class EventsController < ApplicationController
     Event.create(create_params)
   end
   
+  def update
+    event = Event.find(params[:id])
+    if event.your_event?(current_user)
+      event.update(update_params)
+    end
+    redirect_to action: :show
+  end
+  
   def edit
     @event = Event.includes(:user).find(params[:id])
   end
   
   def destroy
+    event = Event.find(params[:id])
+    if event.your_event?(current_user)
+      event.destroy
+    end
+    redirect_to action: :show, controller: :users, id: current_user.id
   end
     
   private
   def create_params
-    params.require(:event).permit(:title, :date, :text).merge(owner_id: current_user.id)
+    params.require(:event).permit(:title, :date, :text).merge(user_id: current_user.id)
+  end
+  
+  def update_params
+    params.require(:event).permit(:title, :date, :text)
   end
 end
