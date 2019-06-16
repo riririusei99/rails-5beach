@@ -9,5 +9,5 @@
 </div>
 
 <%= button_to "イベントを修正する", edit_event_path, method: :get, class: "btn btn-primary"%>
-<%= button_to "イベントを削除する", "/event/#{@event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "btn btn-primary"%>
+<%= button_to "イベントを削除する", "/events/#{@event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "btn btn-primary"%>
 
