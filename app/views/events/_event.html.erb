@@ -3,7 +3,7 @@
     <h5 class="card-title"><%= event.title %></h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text"><%= event.text %></p>
-    <a href="#" class="card-link">Card link</a>
+    <%= link_to "詳細", event_path(event), method: :get, calss: "card-link" %>
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
