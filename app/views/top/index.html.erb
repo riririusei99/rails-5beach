@@ -11,18 +11,29 @@
   </head>
 
   <body>
-    <%= render partial: 'common/header' %>
+    <!--<header class="header">-->
+    <!--</header>-->
+    <header class="header">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <h1 class="text-center">"やりきる"ことの難しさ</h1>
+      <p class="text-center">旅行やイベントの計画をサポートします。</p>
+      <div class="mx-auto" style="width: 200px;">
+      <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary btn-primary-extend", style: "width: 200px;" %>
+      </div>
+    </header>
+    <section class="about" id="about">
+    </section>
+  
+    <section class="works">
+    </section>
+  
+    <section class="contact" id="contact">
+    </section>
     <div class="container">
       <div class="message-area">
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
       </div>
         <div class="col align-self-center">
-          <h1 class="text-center">"やりきる"ことの難しさ</h1>
-          <p class="text-center">旅行やイベントの計画をサポートします。</p>
-          <div class="mx-auto" style="width: 200px;">
-          <%= button_to "イベントを計画する", new_event_path, method: :get, class: "btn btn-primary btn-primary-extend", style: "width: 200px;" %>
-          </div>
         </div>
     </div>
   </body>
