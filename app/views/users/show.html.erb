@@ -2,3 +2,5 @@
 <h4><%= "#{@user.email}さんのマイページ" %></h4>
 
 <%= render partial: "events/event", collection: @events %>
+
+<%= paginate(@events) %>
