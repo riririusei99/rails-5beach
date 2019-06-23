@@ -1,28 +1,22 @@
-<nav class="">
-  <div class="row">
-    <div class="col-sm">
-      <a class="navbar-brand nav-link" href="/">5Beach</a>
-    </div>
-    <div class="col-sm">
-    </div>
-    <div class="col-sm">
-      <ul class="nav justify-content-end">
-        <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Sing out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "My Page", "/users/#{current_user.id}", method: :get, class: "nav-link" %>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Sing in", new_user_session_path, method: :get, class: "nav-link" %>
-          </li>
-        <% end %>
-        <!--<li class="nav-item">-->
-        <!--  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-        <!--</li>-->
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">5Beach</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "My Page", "/users/#{current_user.id}", method: :get, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sing out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sing in", new_user_session_path, method: :get, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </nav>

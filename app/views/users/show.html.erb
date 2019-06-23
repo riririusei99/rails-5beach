@@ -1,9 +1,8 @@
-
 <h4></h4>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">ユーザーページだよ！</h1>
-    <p class="lead"><%= "#{@user.email}さんのマイページ" %></p>
+    <h1 class="display-3">Event List</h1>
+    <p class="lead"><%= "for #{@user.email}" %></p>
   </div>
 </div>
 <%= render partial: "events/event", collection: @events %>
