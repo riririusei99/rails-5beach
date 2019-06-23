@@ -1,9 +1,9 @@
 <div class="jumbotron">
   <h2 class="display-4"><%= event.title %></h2>
-  <p class="lead">Date: <%= event.date %></p>
+  <p class="lead">[<%=event.status %>] Date: <%= event.date %></p>
   <hr class="my-4">
   <p><%= event.sub_title %></p>
   <%= link_to "Show more", event_path(event), method: :get, class: "btn btn-primary btn-lg", role: "button" %>
-  <!--<%= link_to "Edit Event", edit_event_path(event), method: :get, class: "btn btn-primary btn-lg", role: "button" %>-->
-  <!--<%= link_to "Delete Event", "/events/#{event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "btn btn-primary btn-lg"%>-->
+  <%= link_to "Edit Event", edit_event_path(event), method: :get, class: "btn btn-primary btn-lg", role: "button" %>
+  <%= link_to "Delete Event", "/events/#{event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "btn btn-primary btn-lg"%>
 </div>

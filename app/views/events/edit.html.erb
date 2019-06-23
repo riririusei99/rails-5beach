@@ -1,20 +1,24 @@
 <%= form_for(@event) do |f|  %>
-  <div class="form-group">
+  <div class="form-group event_title">
     <label for="title">イベント名</label>
     <%= f.text_field :title, placeholder: @event.title, class: "form-control" %>
     <small id="textHelp" class="form-text text-muted">実施したいイベントのタイトルを入力してください。</small>
   </div>
-  <div class="form-group">
+  <div class="form-group event_status">
+    <label for="inputState">ステータス</label>
+    <%= f.select :status, ["計画中","あとはやるだけ","完了"], {prompt: @event_status}, class: "form-control" %>
+  </div>
+  <div class="form-group event_sub_title">
     <label for="title">概要</label>
     <%= f.text_field :sub_title, placeholder: @event.sub_title, class: "form-control" %>
     <small id="textHelp" class="form-text text-muted">イベントの簡単な概要を入力してください。</small>
   </div>
-  <div class="form-group">
+  <div class="form-group event_date">
     <label for="Date">Date</label>
     <%= f.date_field :date, placeholder: @event.date, class: "form-control" %>
     <small id="emailHelp" class="form-text text-muted">イベントの実施日を入力してください。</small>
   </div>
-  <div class="form-group">
+  <div class="form-group event_text">
     <label for="text">テキスト</label>
     <%= f.text_area :text, placeholder: @event.text, class: "form-control" %>
     <small id="textHelp" class="form-text text-muted">概要・連絡等自由に入力してください。</small>
