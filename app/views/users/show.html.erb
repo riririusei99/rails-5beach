@@ -1,6 +1,10 @@
-<h2>ユーザーページだよ！</h2>
-<h4><%= "#{@user.email}さんのマイページ" %></h4>
-
+<h4></h4>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Event List</h1>
+    <p class="lead"><%= "for #{@user.email}" %></p>
+  </div>
+</div>
 <%= render partial: "events/event", collection: @events %>
 
 <%= paginate(@events) %>

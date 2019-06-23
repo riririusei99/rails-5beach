@@ -36,10 +36,10 @@ class EventsController < ApplicationController
     
   private
   def create_params
-    params.require(:event).permit(:title, :date, :text).merge(user_id: current_user.id)
+    params.require(:event).permit(:title, :date, :text, :sub_title).merge(user_id: current_user.id, status: "計画中")
   end
   
   def update_params
-    params.require(:event).permit(:title, :date, :text)
+    params.require(:event).permit(:title, :date, :text, :sub_title, :status)
   end
 end
