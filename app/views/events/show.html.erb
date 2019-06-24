@@ -1,13 +1,29 @@
-<%= render partial: "events/event", collection: [@event] %>
-
-  <div class="Edit">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
+<div class="jumbotron jumbotron-fluid bg-dark">
+  <div class="container">
+    <h1 class="display-3"><%= @event.title %></h1>
+    <p class="lead"><%= @event.sub_title %></p>
+  </div>
+</div>
+<div class="row menu-bar">
+  <div class="nav text-left col">
+    <p class="lead">Date: <%= @event.date %>  <span class="badge badge-success"> <%=@event.status %></span></p>
+  </div>
+  <div class="Edit text-right col">
+    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action List
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <%= link_to "Edit Event", edit_event_path(@event), method: :get, class: "dropdown-item"%>
       <%= link_to "Delete Event", "/events/#{@event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "dropdown-item"%>
     </div>
   </div>
-<h5>テキスト</h5>
-<p><%= @event.text  %></p>
+</div>
+<div class="card">
+  <h5 class="card-header">Event Summary</h5>
+  <div class="card-body">
+    <h5 class="card-title">Note</h5>
+    <p class="card-text"><%= @event.text  %></p>
+    <h5 class="card-title">To Do</h5>
+    <a href="#" class="btn btn-primary">Add ToDo</a>
+  </div>
+</div>
