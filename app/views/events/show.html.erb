@@ -1,3 +1,13 @@
 <%= render partial: "events/event", collection: [@event] %>
+
+  <div class="Edit">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <%= link_to "Edit Event", edit_event_path(@event), method: :get, class: "dropdown-item"%>
+      <%= link_to "Delete Event", "/events/#{@event.id}", method: :delete, data: { confirm: 'イベントを削除します。よろしいですか？' }, class: "dropdown-item"%>
+    </div>
+  </div>
 <h5>テキスト</h5>
 <p><%= @event.text  %></p>
