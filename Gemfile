@@ -68,3 +68,7 @@ gem 'octicons_helper'
 gem 'pry-rails'
 gem 'devise'
 gem 'kaminari'
+
+group :production do
+  gem 'rails_12factor'
+end
